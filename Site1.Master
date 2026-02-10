@@ -1,0 +1,41 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Site.master.cs" Inherits="SiteMaster" %>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" dir="rtl">
+<head runat="server">
+    <meta charset="utf-8" />
+    <title>KFMC Cooperative Training Portal</title>
+    <link href="~/Content/Site.css" rel="stylesheet" type="text/css" />
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server"></asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <header>
+            <div class="logo-section">
+                <img src="Images/kfmc-logo.png" alt="KFMC Logo" class="logo" />
+                <div class="header-text">
+                    <h1 class="english-title">King Fahad Medical City</h1>
+                    <h1 class="arabic-title">مدينة الملك فهد الطبية</h1>
+                    <h2>Cooperative Training Portal</h2>
+                </div>
+            </div>
+            <nav>
+                <ul>
+                    <li><asp:HyperLink NavigateUrl="~/WebForm1.aspx" runat="server">Home</asp:HyperLink></li>
+                    <li><asp:HyperLink NavigateUrl="~/Registration.aspx" runat="server">Registration</asp:HyperLink></li>
+                    <li><asp:HyperLink NavigateUrl="~/Centers.aspx" runat="server">Healthcare Centers</asp:HyperLink></li>
+                    <li><asp:HyperLink NavigateUrl="~/AdminLogIn.aspx" runat="server">Admin</asp:HyperLink></li>
+                </ul>
+            </nav>
+        </header>
+        
+        <main>
+            <asp:ContentPlaceHolder ID="MainContent" runat="server"></asp:ContentPlaceHolder>
+        </main>
+        
+        <footer>
+            <p>&copy; <%: DateTime.Now.Year %> - King Fahad Medical City</p>
+        </footer>
+    </form>
+</body>
+</html>
